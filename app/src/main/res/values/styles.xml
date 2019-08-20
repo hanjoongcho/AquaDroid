@@ -6,7 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorSecondaryDark</item>
-        <item name="android:fontFamily">@font/kanit</item>
+        <item name="android:fontFamily">@font/hmfmpyun</item>
     </style>
 
     <style name="MainTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -14,7 +14,7 @@
         <item name="colorPrimary">@color/colorSecondary</item>
         <item name="colorPrimaryDark">@color/colorSecondary</item>
         <item name="colorAccent">@color/colorSecondaryDark</item>
-        <item name="android:fontFamily">@font/kanit</item>
+        <item name="android:fontFamily">@font/hmfmpyun</item>
     </style>
 
     <style name="ErrorText" parent="TextAppearance.AppCompat">

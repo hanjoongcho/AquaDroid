@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.util.TypedValue
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
 import com.google.android.material.snackbar.Snackbar
@@ -75,6 +76,15 @@ class MainActivity : AppCompatActivity() {
         inTook = sqliteHelper.getIntook(dateNow)
 
         setWaterLevel(inTook, totalIntake)
+
+        btnMenu.setOnLongClickListener {
+            sharedPref.edit().apply {
+                putBoolean(AppUtils.FIRST_RUN_KEY, true)
+                apply()
+                ActivityCompat.finishAffinity(this@MainActivity)
+            }
+            true
+        }
 
         btnMenu.setOnClickListener {
             val bottomSheetFragment = BottomSheetFragment(this)
